@@ -22,6 +22,12 @@ describe Money do
 		expect(m1).to eq(m2)
 	end
 
+	it "having values as 3Rs, 30p should be equal to other object having values 3Rs, 30p" do
+		m1 = Money.new(3,30)
+		m2 = Money.new(3,30)
+		expect(m1.eql?(m2)).to eq(true)
+	end
+
 	it "having values as 3Rs, 30p should not be equal to other object having values 4Rs, 30p" do
 		m1 = Money.new(3,30)
 		m2 = Money.new(4,30)
